@@ -1,0 +1,509 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="QuesStyles.css">
+
+	</head>
+	<body>
+		<header>
+			<h2>Questionaire</h2>
+		</header>
+
+			<center>
+				<form name="first">
+					<div id="One">
+
+							How Old Are You
+							<br>
+							<input type="text" id="inp" name="display1" onblur="a();" placeholder="">
+
+
+
+					</div>
+				</form>
+				<form name="second">
+					<div id="Two" >
+
+
+							<b>Adult </b>
+							<b>Select a gender</b>
+							<br>
+							<p>MALE<input type="radio" id="inp2a" name="display2a" onblur="ba();"value="1"></p>
+						   <p>FEMALE<input type="radio" id="inp2a" name="display2a" onblur="ba();"value="2"></p>
+							<br>
+
+					</div>
+				</form>
+				<form name="third">
+
+					<div id="Three">
+
+							KID
+
+							<br>
+							<p>MALE<input type="radio" id="inp2b" name="display2b" onblur="bb();"value="1"></p>
+						   <p>FEMALE<input type="radio" id="inp2b" name="display2b" onblur="bb();"value="2"></p>
+							<br>
+
+					</div>
+				</form>
+				<form name="fourth">
+					<div id="Four">
+
+							<b>Male</b>
+							<br>
+							<b>Level</b>
+							<br>
+							<select id="inp3a" name="display3a" onblur="ca()">
+  								<option value="1">Year1</option>
+  								<option value="2">Year2</option>
+  								<option value="3">Year3</option>
+  								<option value="4">Year4</option>
+								<option value="5">Year5</option>
+							</select>
+							<br>
+
+					</div>
+				</form>
+				<form name="fifth">
+					<div id="Five">
+
+							Female
+							<br>
+							What level
+							<br>
+
+							<select id="inp3b" name="display3b" onblur="cb()">
+  								<option value="1">Year1</option>
+  								<option value="2">Year2</option>
+  								<option value="3">Year3</option>
+  								<option value="4">Year4</option>
+								<option value="5">Year5</option>
+							</select>
+							<br>
+
+					</div>
+				</form>
+				<form name="sixth">
+					<div id="Six">
+
+							Year1
+							<br>
+							Do You work?
+							<br>
+							<input type="text" id="inp4a" name="display4a" onblur="da();" placeholder="Yes or No">
+							<br>
+
+
+					</div>
+				</form>
+				<form name="seventh">
+					<div id="Seven">
+
+							Year2
+							<br>
+							Do You work?
+							<br>
+							<input type="text" id="inp4b" name="display4b" onblur="db();" placeholder="Yes or No">
+							<br>
+
+
+
+					</div>
+				</form>
+				<form name="eighth">
+					<div id="Eight">
+
+							Year3
+							<br>
+							Do You work?
+							<br>
+							<input type="text" id="inp4c" name="display4c" onblur="dc();" placeholder="Yes or No">
+							<br>
+
+					</div>
+				</form>
+				<form name="nineth">
+					<div id="Nine">
+
+							Year4
+							<br>
+							Do You work?
+							<br>
+							<input type="text" id="inp4d" name="display4d" onblur="dd();"  placeholder="Yes or No">
+							<br>
+
+					</div>
+				</form>
+				<form name="tenth">
+					<div id="Ten">
+
+							Year5
+							<br>
+							Do You work?
+							<br>
+							<input type="text" id="inp4e" name="display4e" onblur="de();"  placeholder="Yes or No">
+							<br>
+
+					</div>
+				</form>
+				<form name="eleventh">
+					<div id="Eleven">
+
+						<p><b>pick a password</b> </p>
+							<input type="password" id="password" onblur="e()">
+
+					</div>
+
+				</form>
+				<form name="twelveth">
+					<div id="Twelve">
+
+							<p> <b>Do you want to fill this form again. All former records would be lost</b> </p>
+								<input type="text" id="restart" onblur="f()">
+
+					</div>
+
+				</form>
+
+			</center>
+
+		<script>
+
+			document.getElementById("Two").style.display="none";
+			document.getElementById("Three").style.display="none";
+			document.getElementById("Four").style.display="none";
+			document.getElementById("Five").style.display="none";
+			document.getElementById("Six").style.display="none";
+			document.getElementById("Seven").style.display="none";
+			document.getElementById("Eight").style.display="none";
+			document.getElementById("Nine").style.display="none";
+			document.getElementById("Ten").style.display="none";
+			document.getElementById("Eleven").style.display="none";
+			document.getElementById("Twelve").style.display="none";
+
+			//document.getElementById("x").style.visibility="hidden";
+
+			function a(){
+				var x=document.getElementById("inp").value;
+				//alert(x);
+
+				if(x>=18){
+					//window.location.href='Greater18.html';
+						document.getElementById("One").style.display="none";
+						document.getElementById("Two").style.display="";
+						//document.second.display2.value ="";
+						//return x;
+				}
+				else if(x=="") {
+					document.first.display1.value ="";
+					//return x;
+					//alert("Please enter the correct input!");
+				}
+				else if(x<18 ){
+					//alert("yes");
+					document.getElementById("One").style.display="none";
+					document.getElementById("Three").style.display="";
+					//return x;
+				}
+				//alert(x);
+
+
+			}
+			function ba(){
+				//document.second.display2.value ="";
+				//document.third.display2.value ="";
+				//alert(x2a);
+				var x2a;
+				x2a = document.getElementById("inp2a").value;
+				//alert(x2a);
+				if(x2a =='1'){
+
+					document.getElementById("Two").style.display="none";
+					document.getElementById("Three").style.display="none";
+					document.getElementById("Four").style.display="";
+					//document.first.display2.value ="";
+					//return "male";
+				}
+
+				else if(x2a=='2'){
+					document.getElementById("Two").style.display="none";
+					document.getElementById("Three").style.display="none";
+					document.getElementById("Five").style.display="";
+					//document.first.display2.value ="";
+					//return "Female";
+				}
+				else if(x2a=="") {
+					document.second.display2a.value ="";
+					//return x2;
+					//alert("Please enter the correct input!");
+				}
+
+				else{
+					alert(x2a);
+				}
+
+
+			}
+			function bb(){
+				var x2b;
+				x2b = document.getElementById("inp2b").value;
+				//alert(x2b);
+				if(x2b =='1'){
+
+					document.getElementById("Two").style.display="none";
+					document.getElementById("Three").style.display="none";
+					document.getElementById("Four").style.display="";
+					//document.first.display2.value ="";
+					//return "male";
+				}
+
+				else if(x2b=='2'){
+					document.getElementById("Two").style.display="none";
+					document.getElementById("Three").style.display="none";
+					document.getElementById("Five").style.display="";
+					//document.first.display2.value ="";
+					//return "Female";
+				}
+				else if(x2b=="") {
+					document.third.display2b.value ="";
+					//return x2;
+					//alert("Please enter the correct input!");
+				}
+
+				else{
+					alert(x2b);
+				}
+			}
+			function ca(){//male
+					var x = document.getElementById("inp3a").value;
+					//alert(x);
+					if(x=='1'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Six").style.display="";
+					}
+					else if(x=='2'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Seven").style.display="";
+					}
+					else if(x=='3'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Eight").style.display="";
+					}
+					else if(x=='4'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Nine").style.display="";
+					}
+					else if(x=='5'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Ten").style.display="";
+					}
+					else if(x=="") {
+					document.fourth.display3a.value ="";
+					//return x2;
+					//alert("Please enter the correct input!");
+				}
+
+			}
+			function cb(){//female
+					var x = document.getElementById("inp3b").value;
+					//alert(x);
+					if(x=='1'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Six").style.display="";
+					}
+					else if(x=='2'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Seven").style.display="";
+					}
+					else if(x=='3'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Eight").style.display="";
+					}
+					else if(x=='4'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Nine").style.display="";
+					}
+					else if(x=='5'){
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Ten").style.display="";
+					}
+					else if(x=="") {
+					document.fifth.display3b.value ="";
+					//return x2;
+					//alert("Please enter the correct input!");
+					}
+
+			}
+			function da(){
+				var x = document.getElementById("inp4a").value;
+				if(x=="yes"||"Yes"||"YES"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Eleven").style.display="";
+					//alert(You are a Nigerian);
+
+				}
+				else if(x=="no"||"NO"||"No"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Twelve").style.display="";
+					//alert(You are not a Nigerian);
+				}
+				else if(x=="") {
+					document.sixth.display4a.value ="";
+
+
+				}
+
+			}
+			function db(){
+				var x = document.getElementById("inp4b").value;
+				if(x=="yes"||"Yes"||"YES"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Eleven").style.display="";
+					//alert(You are a Nigerian);
+				}
+				else if(x=="no"||"NO"||"No"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Twelve").style.display="";
+					//alert(You are not a Nigerian);
+				}
+				else if(x=="") {
+					document.seventh.display4b.value ="";
+
+				}
+
+			}
+			function dc(){
+				var x = document.getElementById("inp4c").value;
+				if(x=="yes"||"Yes"||"YES"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Eleven").style.display="";
+					//alert(You are a Nigerian);
+				}
+				else if(x=="no"||"NO"||"No"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Twelve").style.display="";
+					//alert(You are not a Nigerian);
+				}
+				else if(x=="") {
+					document.eighth.display4c.value ="";
+
+				}
+
+			}
+			function dd(){
+				var x = document.getElementById("inp4d").value;
+				if(x=="yes"||"Yes"||"YES"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Eleven").style.display="";
+					//alert(You are a Nigerian);
+				}
+				else if(x=="no"||"NO"||"No"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Twelve").style.display="";
+					//alert(You are not a Nigerian);
+				}
+				else if(x=="") {
+					document.ninth.display4d.value ="";
+				}
+
+			}
+			function de(){
+				var x = document.getElementById("inp4e").value;
+				if(x=="yes"||"Yes"||"YES"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Eleven").style.display="";
+					//alert(You are a Nigerian);
+				}
+				else if(x=="no"||"NO"||"No"){
+					document.getElementById("Six").style.display="none";
+					document.getElementById("Seven").style.display="none";
+					document.getElementById("Eight").style.display="none";
+					document.getElementById("Nine").style.display="none";
+					document.getElementById("Ten").style.display="none";
+					document.getElementById("Twelve").style.display="";
+					//alert(You are not a Nigerian);
+				}
+				else if(x=="") {
+					document.tenth.display4e.value ="";
+
+				}
+
+			}
+
+			function e(){
+				var x = document.getElementById("password").value;
+				document.getElementById("Eleven").style.display="none";
+				document.getElementById("Twelve").style.display="";
+			}
+
+			function f() {
+				var x = document.getElementById("restart").value;
+				if (x=="yes"||"Yes"||"YES") {
+						document.getElementById("One").style.display="";
+						document.getElementById("Two").style.display="none";
+						document.getElementById("Three").style.display="none";
+						document.getElementById("Four").style.display="none";
+						document.getElementById("Five").style.display="none";
+						document.getElementById("Six").style.display="none";
+						document.getElementById("Seven").style.display="none";
+						document.getElementById("Eight").style.display="none";
+						document.getElementById("Nine").style.display="none";
+						document.getElementById("Ten").style.display="none";
+						document.getElementById("Eleven").style.display="none";
+						document.getElementById("Twelve").style.display="none";
+				}
+				else {
+					alert("thank you for filling this form");
+					
+				}
+			}
+		</script>
+	</body>
+</html>
