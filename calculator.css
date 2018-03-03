@@ -1,0 +1,25 @@
+.button{
+   text-align: center;
+   width: 120px;
+   height: 50px;
+   font-size: 1em;
+   font-weight: bold;
+}
+.disp1{
+   height: 30px ;
+   width: 612px;
+   display: block;
+   text-align: right;
+}
+.disp2{
+   height: 100px ;
+   width: 612px;
+   text-align: right;
+}
+
+@font-face {
+
+}
+.disp{
+   font-size: 3em;
+}
